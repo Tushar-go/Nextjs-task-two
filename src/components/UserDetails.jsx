@@ -21,6 +21,35 @@ function UserDetails({user}){
   
       return dateString;
   }
+
+  const locations = [
+   "Seattle, WA",
+  "New York City, NY",
+  "Los Angeles, CA",
+  "Chicago, IL",
+  "San Francisco, CA",
+  "Austin, TX",
+  "Boston, MA",
+  "Denver, CO",
+  "Miami, FL",
+  "Portland, OR",
+  "Atlanta, GA",
+  "Dallas, TX",
+  "Phoenix, AZ",
+  "Philadelphia, PA",
+  "San Diego, CA",
+  "Las Vegas, NV",
+  "Washington, D.C.",
+  "Houston, TX",
+  "Detroit, MI",
+  "Minneapolis, MN"
+  ];
+
+  // Generate random index
+  const randomIndex = Math.floor(Math.random() * locations.length);
+
+  // Retrieve random location
+  const randomLocation = locations[randomIndex];
   
   
   function getMaxDaysInMonth(month) {
@@ -70,7 +99,7 @@ function UserDetails({user}){
           </div>
           <div>
             <h3 className="font-semibold">Location</h3>
-            <p>Seattle, WA</p>
+            <p>{randomLocation}</p>
           </div>
           <div>
             <h3 className="font-semibold">Joined</h3>
